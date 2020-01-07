@@ -8,24 +8,36 @@
       DatoCmsPlugin.init(function(plugin) {
         const permanentFieldKeys = ["title", "body", "layout"];
         const tempFieldsKeys = Object.values(plugin.fields)
-          .filter(f => !permanentFieldKeys.includes(f.attributes.api_key))
-          .map(f => f.attributes.api_key);
+          .filter(function (f) {
+            return !permanentFieldKeys.includes(f.attributes.api_key);
+          })
+          .map(function (f) {
+            return f.attributes.api_key;
+          });
 
         function toggleFields(layout) {
           // Hide fields
-          tempFieldsKeys.map(f => plugin.toggleField(f, false));
+          tempFieldsKeys.map(function (f) {
+            return plugin.toggleField(f, false);
+          });
 
           // Show fields
           tempFieldsKeys
-            .filter(f => f.startsWith(layout.toLowerCase()))
-            .map(f => plugin.toggleField(f, true));
+            .filter(function (f) {
+              return f.startsWith(layout.toLowerCase());
+            })
+            .map(function (f) {
+              return plugin.toggleField(f, true);
+            });
         }
 
         toggleFields(plugin.getFieldValue(plugin.fieldPath));
 
         const unsubscribe = plugin.addFieldChangeListener(
           plugin.fieldPath,
-          value => toggleFields(value)
+          function (value) {
+            return toggleFields(value);
+          }
         );
       });
     </script>
