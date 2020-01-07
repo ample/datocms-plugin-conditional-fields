@@ -4,7 +4,7 @@ Dato CMS Plugin to allow for conditional fields.
 
 ## V1 - Getting started
 
-1. Add plugin to Dato CMS ([docs](https://www.datocms.com/docs/guides/building-plugins/creating-a-new-plugin)) use https://friendly-liskov-e0d60e.netlify.com/v1 for the **Entry Point URL**
+1. Add plugin to Dato CMS ([docs](https://datocms-plugin-conditional-fields.netlify.com/creating-a-new-plugin)) use https://friendly-liskov-e0d60e.netlify.com/v1 for the **Entry Point URL**
 
 	![Plugin Setup Example](assets/v1/plugin-setup-example.png)
 2. Enable the plugin on the required field(s) under the **Presentation** tab in the **Field add-ons** section
