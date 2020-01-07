@@ -6,7 +6,16 @@
   <body>
     <script type="text/javascript">
       DatoCmsPlugin.init(function(plugin) {
-        const permanentFieldKeys = ["title", "body", "layout"];
+        const permanentFieldKeys = [
+          "title",
+          "permalink",
+          "layout",
+          "description",
+          "image",
+          "blocks",
+          "seo_meta",
+          "url_group",
+        ];
         const tempFieldsKeys = Object.values(plugin.fields)
           .filter(function (f) {
             return !permanentFieldKeys.includes(f.attributes.api_key);
